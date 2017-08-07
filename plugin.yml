@@ -1,9 +1,7 @@
-name: PMMP-Compatible
-version: 0.0.1
-api: [2.0.0]
-author: jasonczc/PeratX
+name: PMMP-Compatibility-Plugin
+version: 0.1.0-alpha.1
+api: [2.0.0, 3.0.0, 3.0.0-ALPHA7]
+author: PocketMine Standard Team
 description: Compatible plugin for PMMP Project
-main: Nebzz\Compatible
+main: pms\Loader
 
-
-commands:
