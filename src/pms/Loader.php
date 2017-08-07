@@ -19,7 +19,5 @@ namespace pms;
 use pocketmine\plugin\PluginBase;
 
 class Loader extends PluginBase{
-	public function onLoad(){
-		$this->getServer()->getLoader()->addPath($this->getFile() . "src");
-	}
+	public function onLoad(){}
 }
