@@ -1,0 +1,9 @@
+name: PMMP-Compatible
+version: 0.0.1
+api: [2.0.0]
+author: jasonczc/PeratX
+description: Compatible plugin for PMMP Project
+main: Nebzz\Compatible
+
+
+commands:
