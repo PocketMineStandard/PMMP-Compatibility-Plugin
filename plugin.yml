@@ -4,4 +4,4 @@ api: [2.0.0, 3.0.0, 3.0.0-ALPHA7]
 author: PocketMine Standard Team
 description: Compatible plugin for PMMP Project
 main: pms\Loader
-
+load: STARTUP

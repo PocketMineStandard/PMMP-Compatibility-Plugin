@@ -26,9 +26,12 @@ class Loader extends PluginBase{
      * startup
      */
 	public function onLoad(){
-        $this->getServer()->getLoader()->addPath($this->getFile() . "src");
-        $this->initHandle();
+        $this->getServer()->getLoader()->addPath($this->getFile() . "src\pocketmine");
+        
     }
+	public function onEnable(){
+		$this->initHandle();
+	}
 
     public function getInstance(){
 	    return self::class;
