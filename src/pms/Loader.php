@@ -16,10 +16,38 @@
 
 namespace pms;
 
+use pms\Handle\ExpHandle;
 use pocketmine\plugin\PluginBase;
 
 class Loader extends PluginBase{
+    public $ExpHandle;
+
+    /*
+     * startup
+     */
 	public function onLoad(){
         $this->getServer()->getLoader()->addPath($this->getFile() . "src");
+        $this->initHandle();
+    }
+
+    public function getInstance(){
+	    return self::class;
+    }
+
+    /*
+     * init
+     * @return true
+     */
+    public function initHandle(){//TO DO:ADD CONFIG
+	    $this->ExpHandle = new ExpHandle($this);
+	    return true;
+    }
+
+    /*
+     * get ExpHandle Object
+     * @return ExpHandle
+     */
+    public function getExpHandle(){
+        return $this->ExpHandle;
     }
 }
