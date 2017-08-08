@@ -110,18 +110,18 @@ class XPOrb extends Entity {
 			}
 
 			if($minDistance <= 1.3){
-				if($this->getLevel()->getServer()->expEnabled and $target->canPickupXp()){
+			//	if($this->getLevel()->getServer()->expEnabled and $target->canPickupXp()){
 					$this->getLevel()->getServer()->getPluginManager()->callEvent($ev = new PlayerPickupExpOrbEvent($target, $this->getExperience()));
 					if(!$ev->isCancelled()){
 						$this->kill();
 						$this->close();
 						if($this->getExperience() > 0){
 							$target->level->addSound(new ExpPickupSound($target, mt_rand(0, 1000)));
-							$target->addXp($this->getExperience());
-							$target->resetXpCooldown();
+			//				$target->addXp($this->getExperience());
+			//				$target->resetXpCooldown();
 						}
 					}
-				}
+			//	}
 			}
 		}
 
